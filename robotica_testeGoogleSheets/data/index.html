@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle da Máquina</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <h1>Controle da Máquina</h1>
+
+    <div class="grid-container">
+        <!-- Modo -->
+        <div class="comando">
+            <h2>Modo</h2>
+            <button onclick="enviarComando('ligarSistema')">Modo Automático</button>
+            <button onclick="enviarComando('desligarSistema')">Modo Manual</button>
+        </div>
+
+        <!-- Esteira -->
+        <div class="comando">
+            <h2>Esteira</h2>
+            <button onclick="enviarComando('ligarEsteira')">Ligar Esteira</button>
+            <button onclick="enviarComando('desligarEsteira')">Desligar Esteira</button>
+        </div>
+
+        <!-- Separador -->
+        <div class="comando">
+            <h2>Separador</h2>
+            <button onclick="enviarComando('ligarSeparador')">Ligar Separador</button>
+            <button onclick="enviarComando('desligarSeparador')">Desligar Separador</button>
+        </div>
+
+        <!-- Trava -->
+        <div class="comando">
+            <h2>Trava</h2>
+            <button onclick="enviarComando('ligarTrava')">Abrir Trava</button>
+            <button onclick="enviarComando('desligarTrava')">Fechar Trava</button>
+        </div>
+
+        <!-- Medidor -->
+        <div class="comando">
+            <h2>Medidor</h2>
+            <button onclick="enviarComando('ligarMedidor')">Ligar Medidor</button>
+            <button onclick="enviarComando('desligarMedidor')">Desligar Medidor</button>
+        </div>
+
+        <!-- Magazine -->
+        <div class="comando">
+            <h2>Magazine</h2>
+            <button onclick="enviarComando('ligarMagazine')">Ligar Magazine</button>
+            <button onclick="enviarComando('desligarMagazine')">Desligar Magazine</button>
+        </div>
+    </div>
+
+    <div class="status-container">
+        <p id="status">Aguardando comandos...</p>
+        <p>Tempo do último ciclo automático: <span id="tempoCiclo">--</span> ms</p>
+        <p>Total de peças processadas: <span id="contadorPecas">0</span></p>
+        <button id="btnCSV" onclick="baixarCSV()">Baixar CSV</button>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
